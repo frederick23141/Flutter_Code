@@ -44,7 +44,7 @@ Widget cuerpo() {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
 
-        children: [titulo(), campoUsuario(), campoContrasena()],
+        children: [titulo(), campoUsuario(), campoContrasena(), botoningreso()],
       ),
     ),
   );
@@ -59,24 +59,44 @@ Widget titulo() {
 }
 
 Widget campoUsuario() {
-  return TextField(
-    decoration: InputDecoration(
-      labelText: "Usuario",
-      hintText: "Ingrese su usuario",
-      icon: Icon(Icons.person),
-      fillColor: Colors.white,
-      filled: true,
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+    child: TextField(
+      decoration: InputDecoration(
+        labelText: "Usuario",
+        hintText: "Ingrese su usuario",
+        icon: Icon(Icons.person),
+        fillColor: Colors.white,
+        filled: true,
+      ),
     ),
   );
 }
 
 Widget campoContrasena() {
-  return TextField(
-    decoration: InputDecoration(
-      labelText: "Contraseña",
-      hintText: "Ingrese su contraseña",
-      icon: Icon(Icons.lock),
+  return Container(
+    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+    child: TextField(
+      decoration: InputDecoration(
+        labelText: "Contraseña",
+        hintText: "Ingrese su contraseña",
+        fillColor: Colors.white,
+        filled: true,
+        icon: Icon(Icons.lock),
+      ),
+      obscureText: true,
     ),
-    obscureText: true,
+  );
+}
+
+Widget botoningreso() {
+  return TextButton(
+    style: TextButton.styleFrom(
+      backgroundColor: Colors.deepPurple,
+      foregroundColor: Colors.white,
+      padding: EdgeInsets.symmetric(horizontal: 100.0, vertical: 10.0),
+    ),
+    onPressed: () {},
+    child: Text("Ingresar"),
   );
 }
