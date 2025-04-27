@@ -29,6 +29,7 @@ class _InicioState extends State<Inicio> {
   }
 }
 
+//wigdwet separados para el cuerpo
 Widget cuerpo() {
   return Container(
     decoration: BoxDecoration(
@@ -39,6 +40,14 @@ Widget cuerpo() {
         fit: BoxFit.cover,
       ),
     ),
-    child: Center(child: Text("Hola mundos")),
+    child: Center(child: titulo()),
+  );
+}
+
+//wigdget separados para el titulo
+Widget titulo() {
+  return Text(
+    "Ingresar",
+    style: TextStyle(color: Colors.black, fontSize: 20.0),
   );
 }
