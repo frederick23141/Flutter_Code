@@ -40,7 +40,13 @@ Widget cuerpo() {
         fit: BoxFit.cover,
       ),
     ),
-    child: Center(child: titulo()),
+    child: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+
+        children: [titulo(), campoUsuario(), campoContrasena()],
+      ),
+    ),
   );
 }
 
@@ -49,5 +55,28 @@ Widget titulo() {
   return Text(
     "Ingresar",
     style: TextStyle(color: Colors.black, fontSize: 20.0),
+  );
+}
+
+Widget campoUsuario() {
+  return TextField(
+    decoration: InputDecoration(
+      labelText: "Usuario",
+      hintText: "Ingrese su usuario",
+      icon: Icon(Icons.person),
+      fillColor: Colors.white,
+      filled: true,
+    ),
+  );
+}
+
+Widget campoContrasena() {
+  return TextField(
+    decoration: InputDecoration(
+      labelText: "Contraseña",
+      hintText: "Ingrese su contraseña",
+      icon: Icon(Icons.lock),
+    ),
+    obscureText: true,
   );
 }
