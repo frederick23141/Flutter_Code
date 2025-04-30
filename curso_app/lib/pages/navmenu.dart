@@ -1,5 +1,7 @@
 import 'package:curso_app/login.dart';
-import 'package:curso_app/pages/pagelist.dart';
+import 'package:curso_app/pages/principal.dart';
+import 'package:curso_app/pages/routelist.dart';
+import 'package:curso_app/pages/userlist.dart';
 import 'package:flutter/material.dart';
 
 class MenuOpciones extends StatelessWidget {
@@ -24,6 +26,10 @@ class MenuOpciones extends StatelessWidget {
           title: Text('Central', style: TextStyle(fontSize: 14.0)),
           onTap: () {
             // Acción para Inicio
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => principal()),
+            );
           },
         ),
         ListTile(
@@ -41,7 +47,7 @@ class MenuOpciones extends StatelessWidget {
             Navigator.push(
               context,
               //materialPageRoute es un widget que permite navegar entre pantallas con estilo material.
-              MaterialPageRoute(builder: (context) => pagelist()),
+              MaterialPageRoute(builder: (context) => userlist()),
               //MaterialPageRoute(builder: (context) => Dashboard()),
             );
           },
@@ -51,6 +57,10 @@ class MenuOpciones extends StatelessWidget {
           title: Text('Rutas', style: TextStyle(fontSize: 14.0)),
           onTap: () {
             // Acción para Acerca de
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => routelist()),
+            );
           },
         ),
         ListTile(

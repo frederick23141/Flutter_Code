@@ -4,18 +4,23 @@ class EmpresaCard extends StatelessWidget {
   final String nombre;
   final String nit;
   final String estado;
+  final String direccion;
 
   const EmpresaCard({
     super.key,
     required this.nombre,
     required this.nit,
     required this.estado,
+    required this.direccion,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(8), // Espaciado exterior
+      padding: EdgeInsets.symmetric(
+        horizontal: 8,
+        vertical: 2,
+      ), // Espaciado exterior
       child: Card(
         elevation: 1,
         child: Padding(
@@ -36,15 +41,20 @@ class EmpresaCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 4),
+                    SizedBox(height: 3),
                     Text(
                       'NIT: $nit',
                       style: TextStyle(fontSize: 12, color: Colors.grey[700]),
                     ),
-                    SizedBox(height: 4),
+                    SizedBox(height: 3),
+                    Text(
+                      'Dirección: $direccion',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
+                    ),
+                    SizedBox(height: 2),
                     Text(
                       'Estado: $estado',
-                      style: TextStyle(fontSize: 12, color: Colors.green),
+                      style: TextStyle(fontSize: 10, color: Colors.green),
                     ),
                   ],
                 ),
