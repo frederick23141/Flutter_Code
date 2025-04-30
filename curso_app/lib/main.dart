@@ -1,6 +1,7 @@
+import 'package:curso_app/login.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MiApp());
+void main() => runApp(Login());
 
 class MiApp extends StatelessWidget {
   const MiApp({super.key});
