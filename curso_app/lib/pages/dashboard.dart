@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatelessWidget {
+//variable de estado para manipular el alertdilog, variables goblales fuera de la clase.
+bool _estadoTerminos = false;
+
+class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
+  @override
+  State<Dashboard> createState() => _Dashboard();
+}
+
+class _Dashboard extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,9 +46,52 @@ class Dashboard extends StatelessWidget {
                 ),
 
                 onPressed: () {
-                  //metodo para regresar a la pantalla anterior
-                  Navigator.pop(context);
+                  showDialog(
+                    //el barrierDismissible es un booleano que indica si se puede cerrar la alerta al tocar fuera de ella
+                    barrierDismissible: false,
+                    context: context,
+                    builder:
+                        (_) => new AlertDialog(
+                          title: Text(
+                            _estadoTerminos
+                                ? "Cancelar Terminos"
+                                : "Aceptar Terminos",
+                          ),
+                          content: Text(
+                            "Estas seguro de aceptar los terminos y condiciones?",
+                          ),
+                          actions: [
+                            ElevatedButton(
+                              onPressed: () {
+                                //para usar setstate debe crearse el extends de la clase
+                                setState(() {
+                                  _estadoTerminos = !_estadoTerminos;
+                                });
+                                //cambia el estado de la variable global
+
+                                Navigator.pop(context);
+                              },
+                              child: Text("Aceptar"),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                _estadoTerminos = false;
+                                setState(() {});
+                                //metodo para regresar a la pantalla anterior
+                                Navigator.pop(context);
+                              },
+                              child: Text("Cancelar"),
+                            ),
+                          ],
+                        ),
+                  );
                 },
+              ),
+              SizedBox(height: 20),
+              Text(
+                _estadoTerminos
+                    ? "Terminos aceptados"
+                    : "Terminos no aceptados",
               ),
             ],
           ),

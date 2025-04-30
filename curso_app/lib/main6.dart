@@ -46,7 +46,7 @@ class _HomeState extends State<Inicio> {
                 Navigator.push(
                   context,
                   //materialPageRoute es un widget que permite navegar entre pantallas con estilo material.
-                  MaterialPageRoute(builder: (context) => const Dashboard()),
+                  MaterialPageRoute(builder: (context) => Dashboard()),
                 );
               },
             ),
