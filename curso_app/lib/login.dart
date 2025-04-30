@@ -1,4 +1,5 @@
 import 'package:curso_app/pages/dashboard.dart';
+import 'package:curso_app/pages/principal.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(Login());
@@ -69,7 +70,8 @@ class _HomeState extends State<Inicio> {
                   Navigator.push(
                     context,
                     //materialPageRoute es un widget que permite navegar entre pantallas con estilo material.
-                    MaterialPageRoute(builder: (context) => Dashboard()),
+                    MaterialPageRoute(builder: (context) => principal()),
+                    //MaterialPageRoute(builder: (context) => Dashboard()),
                   );
                 },
               ),
