@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/navmenu.dart';
+import 'package:curso_app/pages/pagelist.dart';
+import 'package:curso_app/pages/components/card.dart';
 
-void main() => runApp(principal());
+void main() => runApp(pagelist());
 
-class principal extends StatelessWidget {
-  const principal({super.key});
+class pagelist extends StatelessWidget {
+  const pagelist({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +36,22 @@ class _HomeState extends State<Inicio> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scaffold(
-        appBar: AppBar(title: Text("Gestión movil")),
+        appBar: AppBar(title: Text("Clientes")),
         drawer: Drawer(
           child: MenuOpciones(),
+
           // Aquí insertas el widget personalizado
         ),
-        body: Center(child: Text("Contenido principal")),
+        body: ListView.builder(
+          itemCount: 10, // Número de veces que quieres mostrar el card
+          itemBuilder: (context, index) {
+            return EmpresaCard(
+              nombre: 'Empresa #$index',
+              nit: 'NIT-000$index',
+              estado: index % 2 == 0 ? 'Activo' : 'Inactivo',
+            );
+          },
+        ),
       ),
     );
   }
