@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class MenuOpciones extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         //agregar icono de usuario y nombre del asesor
         Container(

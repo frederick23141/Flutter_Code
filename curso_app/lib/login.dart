@@ -46,7 +46,7 @@ class _HomeState extends State<Inicio> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 20),
-            Image(image: AssetImage("lapp.png")),
+            Image(image: AssetImage("assets/lapp.png")),
             Text("Asesor Movil"),
             SizedBox(height: 40),
             campoUsuario(),

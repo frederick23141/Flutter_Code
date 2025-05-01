@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/navmenu.dart';
+import 'package:curso_app/pages/models/empresa.dart';
 
 void main() => runApp(principal());
 
@@ -30,6 +31,16 @@ class Inicio extends StatefulWidget {
 }
 
 class _HomeState extends State<Inicio> {
+  //llamamos la clase empresa par ausarla desde api
+  Empresa empresa = Empresa("sic", "", 0);
+
+  @override
+  void initState() {
+    super.initState();
+    //llamamos la funcion de la clase empresa para que se ejecute al iniciar la app
+    print(empresa.nombre);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
