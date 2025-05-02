@@ -1,7 +1,7 @@
 import 'package:curso_app/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MiApp6());
+//void main() => runApp(MiApp6());
 
 class MiApp6 extends StatelessWidget {
   const MiApp6({super.key});

@@ -3,7 +3,7 @@ import 'package:curso_app/pages/navmenu.dart';
 import 'package:curso_app/pages/routelist.dart';
 import 'package:curso_app/pages/components/ruteuser.dart';
 
-void main() => runApp(routelist());
+//void main() => runApp(routelist());
 
 String filtro = "";
 

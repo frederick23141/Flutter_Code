@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/navmenu.dart';
 import 'package:curso_app/pages/models/empresa.dart';
+import 'package:curso_app/pages/models/persona.dart';
 
-void main() => runApp(principal());
+//void main() => runApp(principal());
 
 class principal extends StatelessWidget {
   const principal({super.key});
@@ -33,6 +34,11 @@ class Inicio extends StatefulWidget {
 class _HomeState extends State<Inicio> {
   //llamamos la clase empresa par ausarla desde api
   Empresa empresa = Empresa("sic", "", 0);
+  //lista
+  List<Persona> personas = [
+    Persona("Andrea", "gonzzalez", "1232123"),
+    Persona("camilo", "toro", "40642231"),
+  ];
 
   @override
   void initState() {
