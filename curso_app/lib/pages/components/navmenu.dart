@@ -4,6 +4,7 @@ import 'package:curso_app/pages/routelist.dart';
 import 'package:curso_app/pages/userlist.dart';
 import 'package:curso_app/pages/cartera.dart';
 import 'package:curso_app/pages/gifpage.dart';
+import 'package:curso_app/pages/carrusel.dart';
 import 'package:flutter/material.dart';
 
 class MenuOpciones extends StatelessWidget {
@@ -92,6 +93,10 @@ class MenuOpciones extends StatelessWidget {
           title: Text('Buscar', style: TextStyle(fontSize: 14.0)),
           onTap: () {
             // Acción para Acerca de
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Carrusel()),
+            );
           },
         ),
         ListTile(

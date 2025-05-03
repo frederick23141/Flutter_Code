@@ -21,7 +21,10 @@ class BottonMenu extends StatelessWidget {
           icon: Icon(Icons.settings),
           label: "Configuración",
         ),
-        BottomNavigationBarItem(icon: Icon(Icons.message), label: "alertas"),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.photo_size_select_actual_rounded),
+          label: "galeria",
+        ),
       ],
     );
   }
