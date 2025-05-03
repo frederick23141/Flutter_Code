@@ -1,5 +1,6 @@
+import 'package:curso_app/pages/components/bottonmenu.dart';
 import 'package:flutter/material.dart';
-import 'package:curso_app/pages/navmenu.dart';
+import 'package:curso_app/pages/components/navmenu.dart';
 import 'package:curso_app/pages/models/empresa.dart';
 import 'package:curso_app/pages/models/persona.dart';
 
@@ -34,6 +35,7 @@ class Inicio extends StatefulWidget {
 class _HomeState extends State<Inicio> {
   //llamamos la clase empresa par ausarla desde api
   Empresa empresa = Empresa("sic", "", 0);
+  int _selectedIndex = 0;
   //lista
   List<Persona> personas = [
     Persona("Andrea", "gonzzalez", "1232123"),
@@ -57,6 +59,14 @@ class _HomeState extends State<Inicio> {
           // Aquí insertas el widget personalizado
         ),
         body: Center(child: Text("Contenido principal")),
+        bottomNavigationBar: BottonMenu(
+          selectedIndex: _selectedIndex,
+          onItemTapped: (int index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+        ),
       ),
     );
   }
