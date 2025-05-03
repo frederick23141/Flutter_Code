@@ -1,6 +1,7 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:curso_app/pages/components/navmenu.dart';
 
 class Carrusel extends StatefulWidget {
   const Carrusel({super.key});
@@ -35,6 +36,10 @@ class _MyAppState extends State<Carrusel> {
       ),
       title: 'Carrusel',
       home: Scaffold(
+        drawer: Drawer(
+          child: MenuOpciones(),
+          // Aquí insertas el widget personalizado
+        ),
         appBar: AppBar(title: const Text('Material App Bar')),
         body: Container(child: _carrusel(imglist)),
       ),

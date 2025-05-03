@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/models/apigif.dart';
+import 'package:curso_app/pages/components/navmenu.dart';
 import 'package:http/http.dart' as http;
 
 class GifPage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _MyAppState extends State<GifPage> {
   late Future<List<Gifc>> _listadoGifs;
 
   final url = Uri.parse(
-    'https://api.giphy.com/v1/gifs/trending?api_key=CBMtS5EJaI27Mp4vWnON7soLWDcYpBYQ&limit=6&offset=0&rating=g&bundle=low_bandwidth',
+    'https://api.giphy.com/v1/gifs/trending?api_key=CBMtS5EJaI27Mp4vWnON7soLWDcYpBYQ&limit=3&offset=0&rating=g&bundle=messaging_non_clips',
   );
 
   Future<List<Gifc>> _getGifs() async {
@@ -32,10 +33,13 @@ class _MyAppState extends State<GifPage> {
       String body = utf8.decode(response.bodyBytes);
 
       final jsonData = jsonDecode(body);
+
       print(jsonData["data"]);
       // Acceder a la lista de gifs dentro del objeto JSON
       for (var gif in jsonData["data"]) {
-        gifs.add(Gifc(gif["url"]));
+        String name = gif["title"] ?? "Sin título";
+        String imageUrl = gif["images"]["fixed_width_small"]["url"];
+        gifs.add(Gifc(name: name, url: imageUrl));
       }
       return gifs;
     } else {
@@ -57,6 +61,7 @@ class _MyAppState extends State<GifPage> {
       title: "Gif Api",
       home: Scaffold(
         appBar: AppBar(title: Text("Gif Page")),
+        drawer: Drawer(child: MenuOpciones()),
         body: FutureBuilder(
           future: _listadoGifs,
           builder: (context, snapshot) {
@@ -77,9 +82,15 @@ class _MyAppState extends State<GifPage> {
     List<Widget> gif = [];
     for (var gifq in data) {
       gif.add(
-        Card(
-          child: Column(
-            children: [ListTile(title: Text(gifq.name), subtitle: Text("Gif"))],
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: Column(
+              children: [
+                ListTile(title: Text(gifq.name)),
+                Image.network(gifq.url),
+              ],
+            ),
           ),
         ), //Card
       );

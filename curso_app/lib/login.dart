@@ -1,6 +1,7 @@
 import 'package:curso_app/pages/dashboard.dart';
 import 'package:curso_app/pages/principal.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(Login());
 
@@ -25,12 +26,35 @@ class Login extends StatelessWidget {
 
 class Inicio extends StatefulWidget {
   const Inicio({super.key});
-
   @override
   State<Inicio> createState() => _HomeState();
 }
 
 class _HomeState extends State<Inicio> {
+  final TextEditingController _controller = TextEditingController();
+  String? usuario;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _loadPreferences();
+  }
+
+  //guardar datos de manera local, usamos para tema, usuario, y algunas configuraciones
+  _savePreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      prefs.setString("Usuario", usuario.toString());
+    });
+  }
+
+  _loadPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _controller.text = prefs.getString("Usuario").toString();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +73,7 @@ class _HomeState extends State<Inicio> {
             Image(image: AssetImage("assets/lapp.png")),
             Text("Asesor Movil"),
             SizedBox(height: 40),
-            campoUsuario(),
+            campoUsuario(_controller),
             SizedBox(height: 10),
             campoContrasena(),
             SizedBox(height: 40),
@@ -65,6 +89,8 @@ class _HomeState extends State<Inicio> {
                 ),
                 child: const Text("Ingresar", style: TextStyle(fontSize: 20.0)),
                 onPressed: () {
+                  usuario = _controller.text;
+                  _savePreferences();
                   //metodo para navegar a la segunda pantalla
                   //Navigator es una clase que permite navegar entre pantallas en Flutter.
                   Navigator.push(
@@ -83,10 +109,11 @@ class _HomeState extends State<Inicio> {
   }
 }
 
-Widget campoUsuario() {
+Widget campoUsuario(TextEditingController _controller) {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
     child: TextField(
+      controller: _controller,
       decoration: InputDecoration(
         labelText: "Usuario",
         hintText: "Ingrese su usuario",

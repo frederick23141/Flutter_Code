@@ -1,8 +1,6 @@
 class Gifc {
-  final String name = "";
-  // final String url = "";
+  final String name;
+  final String url;
 
-  Gifc(name) {
-    this.name;
-  }
+  Gifc({required this.name, required this.url});
 }
