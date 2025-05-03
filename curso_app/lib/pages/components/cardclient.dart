@@ -26,9 +26,11 @@ class EmpresaCard extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(6), // Espaciado interno del card
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Icon(Icons.business, size: 45, color: Colors.deepOrangeAccent),
+              CircleAvatar(
+                child: Text(nombre[0], style: TextStyle(fontSize: 18)),
+              ),
               SizedBox(width: 20),
               Expanded(
                 child: Column(
@@ -44,27 +46,31 @@ class EmpresaCard extends StatelessWidget {
                     SizedBox(height: 3),
                     Text(
                       'NIT: $nit',
-                      style: TextStyle(fontSize: 12, color: Colors.grey[700]),
+                      style: TextStyle(fontSize: 11, color: Colors.grey[700]),
                     ),
                     SizedBox(height: 3),
                     Text(
                       'Dirección: $direccion',
-                      style: TextStyle(fontSize: 12, color: Colors.black),
+                      style: TextStyle(fontSize: 11, color: Colors.black),
                     ),
                     SizedBox(height: 2),
-                    Text(
-                      'Estado: $estado',
-                      style: TextStyle(fontSize: 10, color: Colors.green),
-                    ),
                   ],
                 ),
               ),
-              IconButton(
-                icon: Icon(Icons.phone, size: 40, color: Colors.green),
+              Text(
+                '$estado',
+                style: TextStyle(
+                  fontSize: 10,
+                  color: '$estado' == 'Activo' ? Colors.green : Colors.red,
+                ),
+              ),
+              /* IconButton(
+                icon: Icon(Icons.phone, size: 35, color: Colors.green),
                 onPressed: () {
                   // Acción al presionar teléfono
                 },
               ),
+              */
             ],
           ),
         ),
