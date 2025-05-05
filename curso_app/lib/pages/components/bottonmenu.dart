@@ -5,10 +5,10 @@ class BottonMenu extends StatelessWidget {
   final Function(int) onItemTapped;
 
   const BottonMenu({
-    Key? key,
+    super.key,
     required this.selectedIndex,
     required this.onItemTapped,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

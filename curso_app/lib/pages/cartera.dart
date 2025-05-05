@@ -2,8 +2,6 @@ import 'package:curso_app/pages/components/carteracomponent.dart';
 import 'package:curso_app/pages/components/carteradetallecomponent.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/components/navmenu.dart';
-import 'package:curso_app/pages/routelist.dart';
-import 'package:curso_app/pages/components/ruteuser.dart';
 
 //void main() => runApp(cartera());
 

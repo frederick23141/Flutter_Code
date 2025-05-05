@@ -7,7 +7,9 @@ import 'package:curso_app/pages/models/persona.dart';
 //void main() => runApp(principal());
 
 class principal extends StatelessWidget {
-  const principal({super.key});
+  //VAMOS A RECIBIR EL CAMPO DE USUARIO PARA MOSTARLO EN LA PATALLA, DEBERIA USAR EL OBJETO USUARIO CUANDO ES FULLWIDGET, DEBE SER LLAMADOANTES CON widget.variable
+  final String usuario;
+  const principal(this.usuario, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,14 @@ class principal extends StatelessWidget {
           foregroundColor: Colors.white, // <- texto e íconos blancos
         ),
       ),
-      home: Inicio(),
+      home: Inicio(usuario),
     );
   }
 }
 
 class Inicio extends StatefulWidget {
-  const Inicio({super.key});
+  final String usuario;
+  const Inicio(this.usuario, {super.key});
 
   @override
   State<Inicio> createState() => _HomeState();
@@ -58,7 +61,7 @@ class _HomeState extends State<Inicio> {
           child: MenuOpciones(),
           // Aquí insertas el widget personalizado
         ),
-        body: Center(child: Text("Contenido principal")),
+        body: Center(child: Text(widget.usuario)),
         bottomNavigationBar: BottonMenu(
           selectedIndex: _selectedIndex,
           onItemTapped: (int index) {

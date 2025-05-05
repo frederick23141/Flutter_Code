@@ -51,7 +51,7 @@ class _Dashboard extends State<Dashboard> {
                     barrierDismissible: false,
                     context: context,
                     builder:
-                        (_) => new AlertDialog(
+                        (_) => AlertDialog(
                           title: Text(
                             _estadoTerminos
                                 ? "Cancelar Terminos"

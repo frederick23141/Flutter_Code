@@ -48,7 +48,7 @@ class _MyAppState extends State<Carrusel> {
 }
 
 Widget _carrusel(imglist) {
-  return Container(
+  return SizedBox(
     width: double.infinity,
     height: 250.0,
     child: Swiper(
@@ -65,8 +65,8 @@ Widget _carrusel(imglist) {
         );
       },
       itemCount: imglist.length,
-      pagination: new SwiperPagination(),
-      control: new SwiperControl(),
+      pagination: SwiperPagination(),
+      control: SwiperControl(),
       viewportFraction: 0.8,
       scale: 0.9,
     ),

@@ -8,6 +8,8 @@ import 'package:curso_app/pages/carrusel.dart';
 import 'package:flutter/material.dart';
 
 class MenuOpciones extends StatelessWidget {
+  const MenuOpciones({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -31,7 +33,7 @@ class MenuOpciones extends StatelessWidget {
             // Acción para Inicio
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => principal()),
+              MaterialPageRoute(builder: (context) => principal("")),
             );
           },
         ),

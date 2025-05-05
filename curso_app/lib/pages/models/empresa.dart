@@ -6,6 +6,6 @@ class Empresa {
   Empresa(String nombre, String propietario, int ingreso) {
     this.nombre = nombre;
     this.propietario = propietario;
-    this.ingresoAnual = ingreso;
+    ingresoAnual = ingreso;
   }
 }

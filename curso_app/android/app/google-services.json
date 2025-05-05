@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "889280428528",
+    "project_id": "comernet-3068c",
+    "storage_bucket": "comernet-3068c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889280428528:android:e015986e3276378905c535",
+        "android_client_info": {
+          "package_name": "com.example.curso_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyPUdcKv4lyVoo8s055welnD3OR8kRa88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889280428528:android:b54976a196a868ab05c535",
+        "android_client_info": {
+          "package_name": "com.fedev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyPUdcKv4lyVoo8s055welnD3OR8kRa88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

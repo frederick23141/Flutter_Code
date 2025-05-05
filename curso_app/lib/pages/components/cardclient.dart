@@ -58,10 +58,10 @@ class EmpresaCard extends StatelessWidget {
                 ),
               ),
               Text(
-                '$estado',
+                estado,
                 style: TextStyle(
                   fontSize: 10,
-                  color: '$estado' == 'Activo' ? Colors.green : Colors.red,
+                  color: estado == 'Activo' ? Colors.green : Colors.red,
                 ),
               ),
               /* IconButton(
