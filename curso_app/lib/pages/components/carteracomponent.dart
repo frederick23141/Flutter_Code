@@ -17,10 +17,7 @@ class carteracomponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 8,
-        vertical: 0,
-      ), // Espaciado exterior
+      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
       child: Card(
         elevation: 1,
         child: Padding(
