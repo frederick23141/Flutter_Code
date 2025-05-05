@@ -34,8 +34,8 @@ dependencies:
   card_swiper: ^3.0.1
   cached_network_image: ^3.3.1
   shared_preferences: ^2.5.3
-  firebase_core:
-  cloud_firestore:
+  firebase_core: ^2.32.0
+  cloud_firestore: ^4.17.2
     # HTTP package for making network requests
 
   # The following adds the Cupertino Icons font to your application.

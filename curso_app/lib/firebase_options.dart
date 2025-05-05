@@ -41,49 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBRDgdy6PeNkX4XiLmA9TRieB3JUMNHIeY',
-    appId: '1:535005405064:web:3a7a7875798423fedfe43d',
-    messagingSenderId: '535005405064',
-    projectId: 'fedev-1e80c',
-    authDomain: 'fedev-1e80c.firebaseapp.com',
-    storageBucket: 'fedev-1e80c.firebasestorage.app',
-    measurementId: 'G-D0P7TQ7V9R',
+    apiKey: 'AIzaSyBoPWrA202Aiagqt-QpbdFLnzPNU2WKET0',
+    appId: '1:681333409317:web:3d5f8dc02a85efe4dc61cc',
+    messagingSenderId: '681333409317',
+    projectId: 'com-asesor',
+    authDomain: 'com-asesor.firebaseapp.com',
+    storageBucket: 'com-asesor.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBIfZldlmr31HQ9aZxO4orBGI8QZlCwPKs',
-    appId: '1:535005405064:android:f05ad72f2346a523dfe43d',
-    messagingSenderId: '535005405064',
-    projectId: 'fedev-1e80c',
-    storageBucket: 'fedev-1e80c.firebasestorage.app',
+    apiKey: 'AIzaSyBQNWVnKST7yiJd_fJGj7PBwWXFEAE69z4',
+    appId: '1:681333409317:android:db678b791e0beaeedc61cc',
+    messagingSenderId: '681333409317',
+    projectId: 'com-asesor',
+    storageBucket: 'com-asesor.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyALsr90V6cEBd1L-mzq77phXGuCMBQK3qc',
-    appId: '1:535005405064:ios:6ab8ea29191d940ddfe43d',
-    messagingSenderId: '535005405064',
-    projectId: 'fedev-1e80c',
-    storageBucket: 'fedev-1e80c.firebasestorage.app',
+    apiKey: 'AIzaSyDIsBdElfhx0phxRQxTAtGxjobE1kJoiak',
+    appId: '1:681333409317:ios:f4628eff8bb1edf4dc61cc',
+    messagingSenderId: '681333409317',
+    projectId: 'com-asesor',
+    storageBucket: 'com-asesor.firebasestorage.app',
     iosBundleId: 'com.example.cursoApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyALsr90V6cEBd1L-mzq77phXGuCMBQK3qc',
-    appId: '1:535005405064:ios:6ab8ea29191d940ddfe43d',
-    messagingSenderId: '535005405064',
-    projectId: 'fedev-1e80c',
-    storageBucket: 'fedev-1e80c.firebasestorage.app',
+    apiKey: 'AIzaSyDIsBdElfhx0phxRQxTAtGxjobE1kJoiak',
+    appId: '1:681333409317:ios:f4628eff8bb1edf4dc61cc',
+    messagingSenderId: '681333409317',
+    projectId: 'com-asesor',
+    storageBucket: 'com-asesor.firebasestorage.app',
     iosBundleId: 'com.example.cursoApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBRDgdy6PeNkX4XiLmA9TRieB3JUMNHIeY',
-    appId: '1:535005405064:web:9f70ca23d57f18f9dfe43d',
-    messagingSenderId: '535005405064',
-    projectId: 'fedev-1e80c',
-    authDomain: 'fedev-1e80c.firebaseapp.com',
-    storageBucket: 'fedev-1e80c.firebasestorage.app',
-    measurementId: 'G-FDRSCSQ6JD',
+    apiKey: 'AIzaSyBoPWrA202Aiagqt-QpbdFLnzPNU2WKET0',
+    appId: '1:681333409317:web:520f8549b8ca2d70dc61cc',
+    messagingSenderId: '681333409317',
+    projectId: 'com-asesor',
+    authDomain: 'com-asesor.firebaseapp.com',
+    storageBucket: 'com-asesor.firebasestorage.app',
   );
-
 }

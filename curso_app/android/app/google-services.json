@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "535005405064",
-    "project_id": "fedev-1e80c",
-    "storage_bucket": "fedev-1e80c.firebasestorage.app"
+    "project_number": "681333409317",
+    "project_id": "com-asesor",
+    "storage_bucket": "com-asesor.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:535005405064:android:f05ad72f2346a523dfe43d",
+        "mobilesdk_app_id": "1:681333409317:android:db678b791e0beaeedc61cc",
         "android_client_info": {
           "package_name": "com.fedev"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBIfZldlmr31HQ9aZxO4orBGI8QZlCwPKs"
+          "current_key": "AIzaSyBQNWVnKST7yiJd_fJGj7PBwWXFEAE69z4"
         }
       ],
       "services": {

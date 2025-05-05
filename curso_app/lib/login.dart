@@ -1,16 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:curso_app/firebase_options.dart';
+import 'package:curso_app/firebase_options.dart' show DefaultFirebaseOptions;
 import 'package:curso_app/pages/principal.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart' show Firebase;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  ); // Asegúrate de que Firebase se haya inicializado
-  runApp(Login());
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const Login());
 }
 
 class Login extends StatelessWidget {
@@ -64,6 +62,11 @@ class _HomeState extends State<Inicio> {
       }
     } catch (e) {
       print('Error al obtener usuarios: $e');
+      if (e is FirebaseException) {
+        print('FirebaseException code: ${e.code}');
+        print('Message: ${e.message}');
+        print('Plugin: ${e.plugin}');
+      }
     }
   }
 
@@ -80,9 +83,8 @@ class _HomeState extends State<Inicio> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       _controller.text = prefs.getString("Usuario").toString();
-      getUsers();
     });
-    // Aquí ya podemos llamar a getUsers, ya que la inicialización de Firebase ha sido completada
+    getUsers();
   }
 
   @override
