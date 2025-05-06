@@ -39,6 +39,7 @@ class Inicio extends StatefulWidget {
 class _HomeState extends State<Inicio> {
   final TextEditingController _controller = TextEditingController(text: "");
   String? usuario;
+  List usaurios = [];
 
   @override
   void initState() {
@@ -57,15 +58,18 @@ class _HomeState extends State<Inicio> {
 
       if (users.docs.isNotEmpty) {
         for (var doc in users.docs) {
-          print(doc.data()); // Corregido: debe ser doc.data() y no doc.data
+          print(doc.data());
+          usaurios.add(
+            doc.data(),
+          ); // Corregido: debe ser doc.data() y no doc.data
         }
       }
     } catch (e) {
       print('Error al obtener usuarios: $e');
       if (e is FirebaseException) {
-        print('FirebaseException code: ${e.code}');
-        print('Message: ${e.message}');
-        print('Plugin: ${e.plugin}');
+        // print('FirebaseException code: ${e.code}');
+        // print('Message: ${e.message}');
+        // print('Plugin: ${e.plugin}');
       }
     }
   }
