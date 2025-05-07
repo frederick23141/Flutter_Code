@@ -39,3 +39,7 @@ flutter pub get
 
 # Ejecutar la app
 flutter run
+
+
+
+![template](https://github.com/user-attachments/assets/fe7dadf9-0791-4eb4-a623-790f1134fa90)
