@@ -10,8 +10,19 @@ class LoginPage extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(8),
-              child: Column(children: [Text("app style dessing")]),
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Text("app style dessing"),
+                  SizedBox(height: 80),
+                  TextField(decoration: InputDecoration(hintText: "Usuario.")),
+                  SizedBox(height: 20),
+                  TextField(
+                    decoration: InputDecoration(hintText: "Contraseña"),
+                    obscureText: true,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
