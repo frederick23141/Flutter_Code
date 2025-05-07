@@ -1,3 +1,5 @@
+![template](https://github.com/user-attachments/assets/1d2d7463-fca8-4a5c-82cb-ab150791a311)
+
 # Proyecto Flutter - Integración progresiva
 
 Este repositorio contiene los ejercicios, prácticas y módulos desarrollados en Flutter.  
@@ -39,3 +41,5 @@ flutter pub get
 
 # Ejecutar la app
 flutter run
+
+
