@@ -1,4 +1,8 @@
 class AppImages {
+  /* <------- Login IconImage-------> */
+  static const imageLogo =
+      'https://www.freepik.es/vector-gratis/atencion-al-cliente-ilustracion-diseno-plano_12982910.htm#fromView=search&page=1&position=0&uuid=c6a1b972-e3c4-4869-b866-7b012ff1849b&query=asesor';
+
   static const roundedLogo = 'https://i.imgur.com/9EsY2t6.png';
 
   /* <---- Homepage banner -----> */
@@ -27,4 +31,6 @@ class AppImages {
     'assets/images/coupon_background_3.png',
     'assets/images/coupon_background_4.png',
   ];
+
+  static const logo = 'assets/images/logo.png';
 }
