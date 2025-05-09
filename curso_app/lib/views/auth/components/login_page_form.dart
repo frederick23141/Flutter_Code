@@ -1,4 +1,5 @@
 import 'package:curso_app/core/constants/constants.dart';
+import 'package:curso_app/core/routes/app_routes.dart';
 import 'package:curso_app/core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -25,7 +26,9 @@ class _LoginPageFormState extends State<LoginPageForm> {
     final bool isFormOkey = _key.currentState?.validate() ?? false;
     if (isFormOkey) {
       //vamos a la proxima pesta;a o pagina
-      //Navigator.pushNamed(context, AppRoutes.home);
+      Navigator.pushNamed(context, AppRoutes.home);
+    } else {
+      Navigator.pushNamed(context, AppRoutes.home);
     }
   }
 
@@ -66,7 +69,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
                   ),
                 ),
               ),
-              SizedBox(height: AppDefaults.padding),
+              SizedBox(height: AppDefaults.padding + 20),
 
               //button login
               LoginButton(onPressed: onLogin),

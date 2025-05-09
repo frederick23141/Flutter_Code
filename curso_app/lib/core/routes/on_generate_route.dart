@@ -1,3 +1,4 @@
+import 'package:curso_app/views/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,10 @@ class RouteGenerator {
 
     switch (route) {
       case AppRoutes.login:
-        return CupertinoPageRoute(builder: (_) => const LoginPage());
+        return MaterialPageRoute(builder: (_) => const LoginPage());
 
-      // case AppRoutes.signup:
-      //   return CupertinoPageRoute(builder: (_) => const SignUpPage());
+      case AppRoutes.home:
+        return MaterialPageRoute(builder: (_) => const HomePage());
 
       // case AppRoutes.termsAndConditions:
       //   return CupertinoPageRoute(

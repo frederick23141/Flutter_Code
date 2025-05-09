@@ -5,6 +5,7 @@ class AppRoutes {
 
   /* <---- Login, Signup -----> */
   static const login = '/login';
+  static const home = '/home';
   static const signup = '/signup';
   static const loginOrSignup = '/loginOrSignup';
   static const numberVerification = '/numberVerification';
