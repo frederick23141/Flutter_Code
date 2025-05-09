@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/components/navmenu.dart';
 import 'package:curso_app/pages/components/bottonmenu.dart';
+import 'package:curso_app/views/drawer/drawer_menu.dart';
 
 class HomePageCentral extends StatefulWidget {
   const HomePageCentral({super.key});
@@ -17,7 +18,7 @@ class _HomePageCentralState extends State<HomePageCentral> {
       body: Scaffold(
         appBar: AppBar(title: Text("Gestión movil")),
         drawer: Drawer(
-          child: MenuOpciones(),
+          child: DrawerMenu(),
           // Aquí insertas el widget personalizado
         ),
         body: Center(child: Text("usuario registrado")),
