@@ -11,4 +11,7 @@ class AppRoutes {
   static const numberVerification = '/numberVerification';
   static const forgotPassword = '/forgotPassword';
   static const passwordReset = '/passwordReset';
+
+  /* <------ client ------>  */
+  static const client = '/client';
 }

@@ -19,9 +19,9 @@ class _HomePageCentralState extends State<HomePageCentral> {
         appBar: AppBar(title: Text("Gestión movil")),
         drawer: Drawer(
           child: DrawerMenu(),
-          // Aquí insertas el widget personalizado
+          //   // Aquí insertas el widget personalizado
         ),
-        body: Center(child: Text("usuario registrado")),
+        body: Center(child: Text("_home page")),
         bottomNavigationBar: BottonMenu(
           selectedIndex: _selectedIndex,
           onItemTapped: (int index) {
