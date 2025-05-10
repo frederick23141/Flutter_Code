@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CardClient extends StatelessWidget {
   final String nombre;
   final String nit;
-  final String estado;
+  final String tipoCliente;
   final String direccion;
 
   const CardClient({
     super.key,
     required this.nombre,
     required this.nit,
-    required this.estado,
+    required this.tipoCliente,
     required this.direccion,
   });
 
@@ -58,10 +58,10 @@ class CardClient extends StatelessWidget {
                 ),
               ),
               Text(
-                estado,
+                tipoCliente,
                 style: TextStyle(
                   fontSize: 10,
-                  color: estado == 'Activo' ? Colors.green : Colors.red,
+                  // color: estado == 'Activo' ? Colors.green : Colors.red,
                 ),
               ),
               /* IconButton(
