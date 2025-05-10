@@ -14,4 +14,5 @@ class AppRoutes {
 
   /* <------ client ------>  */
   static const client = '/client';
+  static const setings = '/setngs';
 }

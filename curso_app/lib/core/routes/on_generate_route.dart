@@ -1,3 +1,4 @@
+import 'package:curso_app/views/Settings/setings_data.dart';
 import 'package:curso_app/views/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,9 @@ class RouteGenerator {
 
       case AppRoutes.client:
         return MaterialPageRoute(builder: (context) => const ClientPage());
+
+      case AppRoutes.setings:
+        return MaterialPageRoute(builder: (_) => const SetingsData());
 
       // case AppRoutes.termsAndConditions:
       //   return CupertinoPageRoute(

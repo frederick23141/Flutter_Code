@@ -14,12 +14,14 @@ class ClientHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(7),
       child: TextField(
         onChanged: onChanged,
         decoration: const InputDecoration(
           labelText: 'Buscar empresa',
-          border: OutlineInputBorder(),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(40)),
+          ),
           prefixIcon: Icon(Icons.search),
         ),
       ),
