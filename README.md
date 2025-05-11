@@ -18,45 +18,45 @@ Cada sección corresponde a temas específicos vistos, integrados progresivament
 
 ## 🧱 Estructura de la Aplicación
 - Gestión de Clientes (CRM)
-	•	Registro de clientes con datos de contacto, ubicación, historial de compras y notas.
-	•	Seguimiento de oportunidades de venta.
-	•	Alertas o recordatorios de seguimiento.
+	-	Registro de clientes con datos de contacto, ubicación, historial de compras y notas.
+	-	Seguimiento de oportunidades de venta.
+	-	Alertas o recordatorios de seguimiento.
 
 - Agenda y Calendario
-	•	Programación de reuniones o visitas.
-	•	Notificaciones de citas importantes.
-	•	Integración con Google Calendar o outlook.
+	-	Programación de reuniones o visitas.
+	-	Notificaciones de citas importantes.
+	-	Integración con Google Calendar o outlook.
 
 - Geolocalización y Rutas
-	•	Mapa para planificar rutas entre clientes.
-	•	Registro automático de ubicación de visitas (check-in/check-out).
-	•	Optimización de rutas para ahorrar tiempo.
+	-	Mapa para planificar rutas entre clientes.
+	-	Registro automático de ubicación de visitas (check-in/check-out).
+	-	Optimización de rutas para ahorrar tiempo.
 
 - Catálogo de Productos o Servicios
-	•	Visualización de productos con imágenes, descripciones y precios.
-	•	Filtro por categorías o disponibilidad.
-	•	Posibilidad de compartir fichas de productos con clientes.
+	-	Visualización de productos con imágenes, descripciones y precios.
+	-	Filtro por categorías o disponibilidad.
+	-	Posibilidad de compartir fichas de productos con clientes.
 
 - Cotizaciones y Pedidos
-	•	Generación rápida de cotizaciones.
-	•	Creación de pedidos desde la app.
-	•	Envío de cotizaciones en PDF al correo del cliente.
+	-	Generación rápida de cotizaciones.
+	-	Creación de pedidos desde la app.
+	-	Envío de cotizaciones en PDF al correo del cliente.
 
 - Estadísticas y Reportes
-	•	Seguimiento de metas personales o por equipo.
-	•	Reporte diario/semanal de visitas, ventas, cotizaciones.
-	•	Análisis de desempeño por zona o producto.
+	-	Seguimiento de metas personales o por equipo.
+	-	Reporte diario/semanal de visitas, ventas, cotizaciones.
+	-	Análisis de desempeño por zona o producto.
 
 - Gestión de Documentos
-	•	Subida y consulta de contratos, fichas técnicas, manuales, etc.
-	•	Escaneo de documentos con la cámara del celular.
+	-	Subida y consulta de contratos, fichas técnicas, manuales, etc.
+	-	Escaneo de documentos con la cámara del celular.
 
 - Modo Offline
-	•	Capacidad de trabajar sin conexión y sincronizar datos luego.
+	-	Capacidad de trabajar sin conexión y sincronizar datos luego.
 
 - Chat o Soporte Interno
-	•	Chat con otros asesores o con un supervisor.
-	•	Sección de preguntas frecuentes o entrenamiento.
+	-	Chat con otros asesores o con un supervisor.
+	-	Sección de preguntas frecuentes o entrenamiento.
 
 ## 🚀 Tecnologías Usadas
 
