@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/views/client/client_page.dart';
 import 'package:curso_app/views/auth/login_screen.dart';
+import 'package:curso_app/views/home/home_page_screen.dart';
 
 import '../../views/auth/login_page.dart';
 
@@ -29,6 +30,9 @@ class RouteGenerator {
 
       case AppRoutes.login_screen:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+
+      case AppRoutes.homescreen:
+        return MaterialPageRoute(builder: (_) => const HomePageScreen());
 
       // case AppRoutes.termsAndConditions:
       //   return CupertinoPageRoute(

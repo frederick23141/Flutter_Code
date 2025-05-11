@@ -43,4 +43,7 @@ class AppColors {
   // Extras
   static const Color border = Color(0xFF9E9E9E); // Bordes de inputs o tarjetas
   static const Color shadow = Color(0xFF263238); // Para sombras o profundidad
+
+  //card
+  static const Color backgroundCard = Color(0xFFF5F5F5);
 }

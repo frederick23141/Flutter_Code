@@ -1,7 +1,7 @@
 import 'package:curso_app/pages/components/carteracomponent.dart';
 import 'package:curso_app/pages/components/carteradetallecomponent.dart';
+import 'package:curso_app/views/drawer/drawer_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:curso_app/pages/components/navmenu.dart';
 
 //void main() => runApp(cartera());
 
@@ -40,7 +40,7 @@ class _HomeState extends State<Inicio> {
       body: Scaffold(
         appBar: AppBar(title: Text("Cartera General")),
         drawer: Drawer(
-          child: MenuOpciones(),
+          child: DrawerMenu(),
           // Aquí insertas el widget personalizado
         ),
         body: Column(

@@ -1,6 +1,6 @@
 import 'package:curso_app/pages/components/bottonmenu.dart';
+import 'package:curso_app/views/drawer/drawer_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:curso_app/pages/components/navmenu.dart';
 import 'package:curso_app/pages/models/empresa.dart';
 import 'package:curso_app/pages/models/persona.dart';
 
@@ -58,7 +58,7 @@ class _HomeState extends State<Inicio> {
       body: Scaffold(
         appBar: AppBar(title: Text("Gestión movil")),
         drawer: Drawer(
-          child: MenuOpciones(),
+          child: DrawerMenu(),
           // Aquí insertas el widget personalizado
         ),
         body: Center(child: Text(widget.usuario)),

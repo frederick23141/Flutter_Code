@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
 import 'package:curso_app/views/auth/components/login_button_screen.dart';
+import 'package:curso_app/views/home/home_page_screen.dart';
 
 class LoginPageFormScreen extends StatefulWidget {
   const LoginPageFormScreen({super.key});
@@ -29,7 +30,10 @@ class _MyWidgetState extends State<LoginPageFormScreen> {
       //vamos a la proxima pesta;a o pagina
       Navigator.pushNamed(context, AppRoutes.home);
     } else {
+      //funcional
       Navigator.pushNamed(context, AppRoutes.home);
+      //dise;o de app moderna
+      Navigator.pushNamed(context, AppRoutes.homescreen);
     }
   }
 

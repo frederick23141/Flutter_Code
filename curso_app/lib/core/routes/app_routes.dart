@@ -14,6 +14,9 @@ class AppRoutes {
 
   static const login_screen = 'login_screen';
 
+  /**  <  -------- home  -------- > */
+  static const homescreen = '/homescreen';
+
   /* <------ client ------>  */
   static const client = '/client';
   static const setings = '/setngs';

@@ -1,8 +1,9 @@
 import 'dart:convert';
 
+import 'package:curso_app/views/drawer/drawer_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/models/apigif.dart';
-import 'package:curso_app/pages/components/navmenu.dart';
+
 import 'package:http/http.dart' as http;
 
 class GifPage extends StatefulWidget {
@@ -61,7 +62,7 @@ class _MyAppState extends State<GifPage> {
       title: "Gif Api",
       home: Scaffold(
         appBar: AppBar(title: Text("Gif Page")),
-        drawer: Drawer(child: MenuOpciones()),
+        drawer: Drawer(child: DrawerMenu()),
         body: FutureBuilder(
           future: _listadoGifs,
           builder: (context, snapshot) {

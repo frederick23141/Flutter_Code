@@ -1,6 +1,6 @@
 import 'package:flutter/Material.dart';
 import 'package:curso_app/views/home/components/botton_menu_app.dart';
-import 'package:curso_app/pages/components/navmenu.dart';
+
 import 'package:curso_app/views/home/components/home_page_central.dart';
 
 class HomePage extends StatefulWidget {
