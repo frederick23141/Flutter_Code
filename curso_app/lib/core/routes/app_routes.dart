@@ -12,6 +12,8 @@ class AppRoutes {
   static const forgotPassword = '/forgotPassword';
   static const passwordReset = '/passwordReset';
 
+  static const login_screen = 'login_screen';
+
   /* <------ client ------>  */
   static const client = '/client';
   static const setings = '/setngs';
