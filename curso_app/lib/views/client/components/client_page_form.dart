@@ -31,6 +31,9 @@ class ClientPageForm extends StatelessWidget {
           direccion: empresa.direccion,
           ciudad: empresa.ciudad,
           referencia: 'N',
+          onTap: () {
+            print('Cliente capturado: ${empresa.nombre}');
+          },
         );
 
         //esta linea de card route es para probar el card. el real es el de cliente

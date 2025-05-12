@@ -14,7 +14,7 @@ class ClientHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5),
+      padding: const EdgeInsets.all(10),
       child: TextField(
         onChanged: onChanged,
         decoration: const InputDecoration(
@@ -23,8 +23,10 @@ class ClientHeader extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(40)),
           ),
+
           prefixIcon: Icon(Icons.search),
         ),
+        style: TextStyle(color: AppColors.textPrimary),
       ),
     );
   }
