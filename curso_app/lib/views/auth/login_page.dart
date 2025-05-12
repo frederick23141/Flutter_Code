@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curso_app/core/controllers/client/client_controller.dart';
+import 'package:curso_app/core/controllers/route/route_controller.dart';
 import 'package:curso_app/views/auth/components/login_header.dart';
 import 'package:curso_app/views/auth/components/login_page_form.dart';
 import 'package:flutter/material.dart';
@@ -21,29 +22,36 @@ class _LoginPageState extends State<LoginPage> {
     initializeFirebaseAndLoadUsers();
   }
 
-  final EmpresaController empresaController = EmpresaController();
+  final RouteController rutaController = RouteController();
+  // final EmpresaController empresaController = EmpresaController();
 
+  //*Inicializar firebase
   Future<void> initializeFirebaseAndLoadUsers() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
 
-    //test
-    await empresaController.cargarEmpresas();
+    /* await empresaController.cargarEmpresas();
     print('Empresas cargadas: ${empresaController.empresas.length}');
     //confirm users
     getUsers();
+*/
+    //obtener rutas
+    await rutaController.cargarRutas();
+    print('Rutas encontradas: ${rutaController.routes.length} ');
+    getRutas();
   }
 
+  /*
   List usaurios = [];
   void getUsers() async {
     try {
       // Asegúrate de que Firebase esté inicializado antes de acceder a Firestore
-      CollectionReference datos = FirebaseFirestore.instance.collection(
+      CollectionReference datosruta = FirebaseFirestore.instance.collection(
         "empresas",
       );
-      QuerySnapshot users = await datos.get();
+      QuerySnapshot users = await datosruta.get();
 
       if (users.docs.isNotEmpty) {
         for (var doc in users.docs) {
@@ -60,6 +68,25 @@ class _LoginPageState extends State<LoginPage> {
         // print('Message: ${e.message}');
         // print('Plugin: ${e.plugin}');
       }
+    }
+  }
+*/
+  List rutas = [];
+  void getRutas() async {
+    try {
+      CollectionReference datos = FirebaseFirestore.instance.collection(
+        "rutas",
+      );
+      QuerySnapshot route = await datos.get();
+
+      if (route.docs.isNotEmpty) {
+        for (var docs in route.docs) {
+          print(docs.data());
+          rutas.add(docs.data());
+        }
+      }
+    } catch (e) {
+      print('Error al obtener las rutas: $e');
     }
   }
 

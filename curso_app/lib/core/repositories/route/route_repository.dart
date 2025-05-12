@@ -11,7 +11,7 @@ class RouteRepository implements IRouteRepository {
 
     try {
       final snapshot =
-          await FirebaseFirestore.instance.collection('empresas').get();
+          await FirebaseFirestore.instance.collection('rutas').get();
 
       rutas =
           snapshot.docs.map((doc) {

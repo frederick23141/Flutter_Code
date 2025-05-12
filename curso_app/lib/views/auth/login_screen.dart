@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curso_app/core/constants/app_images.dart';
 import 'package:curso_app/core/controllers/client/client_controller.dart';
+import 'package:curso_app/core/controllers/route/route_controller.dart';
 import 'package:curso_app/login.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
@@ -26,6 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   final EmpresaController empresaController = EmpresaController();
+  final RouteController routeController = RouteController();
 
   Future<void> initializeFirebaseAndLoadUsers() async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +40,10 @@ class _LoginScreenState extends State<LoginScreen> {
     print('Empresas cargadas: ${empresaController.empresas.length}');
     //confirm users
     getUsers();
+
+    await routeController.cargarRutas();
+    print('rutas encontradas:  ${routeController.routes.length}');
+    getRutas();
   }
 
   //* METODO PARA OBTENER LOS DATOS DE FIRESTORE DE CLIENTES
@@ -69,6 +75,24 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   //* METODO PARA OBTENER LOS DATOS DE FIRESTORE DE RUTAS
+  List rutas = [];
+  void getRutas() async {
+    try {
+      CollectionReference datos = FirebaseFirestore.instance.collection(
+        'rutas',
+      );
+      QuerySnapshot route = await datos.get();
+
+      if (route.docs.isNotEmpty) {
+        for (var doc in route.docs) {
+          print(doc.data());
+          rutas.add(doc.data());
+        }
+      }
+    } catch (e) {
+      print('Error al cargar las rutas: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -29,7 +29,6 @@ class ClientRepository implements IClientRepository {
     } catch (e) {
       print('Error al obtener empresas: $e');
     }
-
     return empresas;
   }
 }

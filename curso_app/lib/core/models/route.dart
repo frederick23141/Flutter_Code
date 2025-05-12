@@ -5,7 +5,7 @@ class RouteModel {
   final String descripcion;
   //final String clientesAsignados;
   final String vendedorId;
-  final DateTime fechaCreacion;
+  final String fechaCreacion;
 
   RouteModel({
     required this.id,
