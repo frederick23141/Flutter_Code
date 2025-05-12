@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:curso_app/core/controllers/client_controller.dart';
+import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/views/auth/components/login_header.dart';
 import 'package:curso_app/views/auth/components/login_page_form.dart';
 import 'package:flutter/material.dart';

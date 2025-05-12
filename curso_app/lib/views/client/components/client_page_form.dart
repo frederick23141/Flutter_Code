@@ -1,4 +1,4 @@
-import 'package:curso_app/core/controllers/client_controller.dart';
+import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/core/models/client.dart';
 import 'package:curso_app/views/client/components/card_client.dart';
 import 'package:curso_app/views/route/components/card_route.dart';

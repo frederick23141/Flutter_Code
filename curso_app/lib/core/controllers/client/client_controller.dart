@@ -1,5 +1,5 @@
 import 'package:curso_app/core/models/client.dart';
-import 'package:curso_app/core/repositories/client/I_client_repository.dart';
+import 'package:curso_app/core/repositories/client/i_client_repository.dart';
 import 'package:curso_app/core/repositories/client/client_repository.dart';
 
 class EmpresaController {

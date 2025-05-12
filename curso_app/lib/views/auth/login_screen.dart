@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curso_app/core/constants/app_images.dart';
-import 'package:curso_app/core/controllers/client_controller.dart';
+import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/login.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
@@ -40,6 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
     getUsers();
   }
 
+  //* METODO PARA OBTENER LOS DATOS DE FIRESTORE DE CLIENTES
   List usaurios = [];
   void getUsers() async {
     try {
@@ -66,6 +67,8 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
   }
+
+  //* METODO PARA OBTENER LOS DATOS DE FIRESTORE DE RUTAS
 
   @override
   Widget build(BuildContext context) {

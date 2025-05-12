@@ -1,25 +1,6 @@
-// import 'package:cloud_firestore/cloud_firestore.dart';
-// import 'package:curso_app/core/repositories/client/I_client_repository.dart';
-
-// class EmpresaRepository implements IClientRepository {
-//   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
-//   @override
-//   Future<List<Map<String, dynamic>>> getEmpresas() async {
-//     try {
-//       final querySnapshot = await _firestore.collection('empresas').get();
-//       return querySnapshot.docs
-//           .map((doc) => doc.data() as Map<String, dynamic>)
-//           .toList();
-//     } catch (e) {
-//       print('Error al obtener empresas: $e');
-//       return [];
-//     }
-//   }
-// }
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curso_app/core/models/client.dart';
-import 'package:curso_app/core/repositories/client/I_client_repository.dart';
+import 'package:curso_app/core/repositories/client/i_client_repository.dart';
 
 class ClientRepository implements IClientRepository {
   @override

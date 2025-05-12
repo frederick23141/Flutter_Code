@@ -14,7 +14,7 @@ class ClientHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(7),
+      padding: const EdgeInsets.all(5),
       child: TextField(
         onChanged: onChanged,
         decoration: const InputDecoration(
