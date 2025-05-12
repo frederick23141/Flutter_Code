@@ -19,6 +19,7 @@ class ClientHeader extends StatelessWidget {
         onChanged: onChanged,
         decoration: const InputDecoration(
           labelText: 'Buscar empresa',
+          hintText: 'Buscar empresa.',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(40)),
           ),

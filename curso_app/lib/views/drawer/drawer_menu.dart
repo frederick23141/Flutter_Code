@@ -1,7 +1,6 @@
 import 'package:curso_app/core/constants/app_images.dart';
 import 'package:curso_app/core/constants/constants.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
-import 'package:curso_app/login.dart';
 import 'package:curso_app/pages/routelist.dart';
 import 'package:curso_app/pages/cartera.dart';
 import 'package:curso_app/pages/gifpage.dart';
@@ -42,7 +41,10 @@ class DrawerMenu extends StatelessWidget {
             Divider(),
 
             ListTile(
-              leading: Icon(CupertinoIcons.home),
+              leading: Icon(
+                CupertinoIcons.home,
+                color: AppColors.buttonPressed,
+              ),
               title: Text('Central', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 Navigator.pop(context);
@@ -51,7 +53,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.captions_bubble),
+              leading: Icon(
+                CupertinoIcons.captions_bubble,
+                color: AppColors.buttonPressed,
+              ),
               title: Text('Novedades', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 // Acción para Configuración
@@ -62,7 +67,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.rectangle_stack_person_crop),
+              leading: Icon(
+                CupertinoIcons.rectangle_stack_person_crop,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Clientes', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -74,7 +82,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.map_pin_ellipse),
+              leading: Icon(
+                CupertinoIcons.map_pin_ellipse,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Rutas', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -86,7 +97,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.calendar),
+              leading: Icon(
+                CupertinoIcons.calendar,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Agenda', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -94,7 +108,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.book),
+              leading: Icon(
+                CupertinoIcons.book,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Catalogo', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -106,7 +123,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.search),
+              leading: Icon(
+                CupertinoIcons.search,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Buscar', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -118,7 +138,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.doc_person),
+              leading: Icon(
+                CupertinoIcons.doc_person,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Cotizacion', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -126,7 +149,10 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.chart_bar_square),
+              leading: Icon(
+                CupertinoIcons.chart_bar_square,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Estadisticas', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -134,14 +160,20 @@ class DrawerMenu extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.money_dollar_circle),
+              leading: Icon(
+                CupertinoIcons.money_dollar_circle,
+                color: AppColors.buttonPressed,
+              ),
               title: Text('Consignaciones', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 // Acción para Acerca de
               },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.paperplane),
+              leading: Icon(
+                CupertinoIcons.paperplane,
+                color: AppColors.buttonPressed,
+              ),
 
               title: Text('Cierre de rutas', style: TextStyle(fontSize: 14.0)),
               onTap: () {
@@ -150,23 +182,20 @@ class DrawerMenu extends StatelessWidget {
             ),
 
             ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.settings, color: AppColors.buttonPressed),
               title: Text('Configuración', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 // Acción para Acerca de
               },
             ),
+            Divider(),
             ListTile(
-              leading: Icon(Icons.logout),
+              leading: Icon(Icons.logout, color: AppColors.error),
               title: Text('Cerrar sesión', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 // Acción para Acerca de
-                Navigator.push(
-                  context,
-                  //materialPageRoute es un widget que permite navegar entre pantallas con estilo material.
-                  MaterialPageRoute(builder: (context) => Login()),
-                  //MaterialPageRoute(builder: (context) => Dashboard()),
-                );
+                Navigator.pop(context);
+                Navigator.pushNamed(context, AppRoutes.login_screen);
               },
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:curso_app/views/client/components/card_client.dart';
 import 'package:curso_app/views/client/components/client_page_form.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,10 @@ class _ClientState extends State<ClientPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Clientes")),
+      appBar: AppBar(
+        title: Text("Clientes"),
+        backgroundColor: AppColors.buttonPrimary,
+      ),
       drawer: Drawer(child: DrawerMenu()),
       body: SafeArea(
         child: Center(

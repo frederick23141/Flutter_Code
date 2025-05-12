@@ -2,20 +2,20 @@ import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CardClient extends StatelessWidget {
+class CardRoute extends StatelessWidget {
   final String nombre;
-  final String nit;
-  final String tipoCliente;
-  final String direccion;
+  final int clientes;
+  final int visitados;
+  final int ventas;
   final String ciudad;
   final String referencia;
 
-  const CardClient({
+  const CardRoute({
     super.key,
     required this.nombre,
-    required this.nit,
-    required this.tipoCliente,
-    required this.direccion,
+    required this.clientes,
+    required this.visitados,
+    required this.ventas,
     required this.ciudad,
     required this.referencia,
   });
@@ -32,14 +32,8 @@ class CardClient extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                child: Text(
-                  nombre[0],
-                  style: TextStyle(fontSize: 20, color: AppColors.textPrimary),
-                ),
-                backgroundColor: AppColors.buttonPrimary,
-              ),
-              SizedBox(width: 20),
+              Row(children: [Icon(CupertinoIcons.map_pin, size: 30)]),
+              SizedBox(width: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,52 +47,54 @@ class CardClient extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 3),
-                    Text(
-                      'NIT: $nit',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: AppColors.textSecondary,
-                      ),
-                    ),
-                    SizedBox(height: 3),
+
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '$ciudad - ',
+                          'Clientes: $clientes',
                           style: TextStyle(
                             fontSize: 12,
-                            color: AppColors.textPrimary,
+                            color: AppColors.textSecondary,
+                          ),
+                        ),
+                        Text(
+                          'Visitados: $visitados',
+                          style: TextStyle(
+                            fontSize: 12,
+                            // color: estado == 'Activo' ? Colors.green : Colors.red,
+                          ),
+                        ),
+                        Text(
+                          'Ventas: $ventas',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: AppColors.textSecondary,
                           ),
                         ),
                         SizedBox(width: 4),
-                        Text(
-                          'Dirección: $direccion',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: AppColors.textPrimary,
-                          ),
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
-              Text(
-                tipoCliente,
-                style: TextStyle(
-                  fontSize: 10,
-                  // color: estado == 'Activo' ? Colors.green : Colors.red,
-                ),
-              ),
-              IconButton(
-                icon: Icon(
-                  CupertinoIcons.location_solid,
-                  size: 35,
-                  color: referencia == 'S' ? Colors.green : Colors.grey,
-                ),
-                onPressed: () {
-                  // Acción al presionar teléfono
-                },
+              Column(
+                children: [
+                  Text(
+                    'Cobertura: 50%',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                  Text(
+                    'Efectividad: 50%',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
