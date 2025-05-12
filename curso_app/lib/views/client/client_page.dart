@@ -40,7 +40,7 @@ class _ClientState extends State<ClientPage> {
           ),
           style: TextStyle(color: AppColors.textPrimary),
         ),
-        backgroundColor: AppColors.buttonPrimary,
+        backgroundColor: AppColors.backgroundAlt,
       ),
       drawer: Drawer(child: DrawerMenu()),
       body: SafeArea(
