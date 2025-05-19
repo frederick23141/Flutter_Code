@@ -5,17 +5,17 @@ class AppRoutes {
 
   /* <---- Login, Signup -----> */
   static const login = '/login';
-  static const home = '/home';
+  //static const home = '/home';
   static const signup = '/signup';
   static const loginOrSignup = '/loginOrSignup';
   static const numberVerification = '/numberVerification';
   static const forgotPassword = '/forgotPassword';
   static const passwordReset = '/passwordReset';
 
-  static const login_screen = 'login_screen';
+  static const login_screen = '/login_screen';
 
   /**  <  -------- home  -------- > */
-  static const homescreen = '/homescreen';
+  static const homescreen = '/home_screen';
 
   /* <------ client ------>  */
   static const client = '/client';

@@ -1,21 +1,28 @@
+import 'package:curso_app/blocs/auth/auth_bloc.dart';
+import 'package:curso_app/blocs/auth/auth_event.dart';
 import 'package:curso_app/core/constants/app_defaults.dart';
 import 'package:curso_app/core/themes/app_themes.dart';
+import 'package:curso_app/ui/screens/auth/components/login_button_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
-import 'package:curso_app/views/auth/components/login_button_screen.dart';
+
 import 'package:curso_app/views/home/home_page_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPageFormScreen extends StatefulWidget {
   const LoginPageFormScreen({super.key});
 
   @override
-  State<LoginPageFormScreen> createState() => _MyWidgetState();
+  State<LoginPageFormScreen> createState() => _LoginPageFormScreen();
 }
 
-class _MyWidgetState extends State<LoginPageFormScreen> {
-  final _key = GlobalKey<FormState>();
+class _LoginPageFormScreen extends State<LoginPageFormScreen> {
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  // final _key = GlobalKey<FormState>();
 
   //metodo para determinar se se clickeo el mostrar contrase;a
   bool isPasswordShown = false;
@@ -24,17 +31,20 @@ class _MyWidgetState extends State<LoginPageFormScreen> {
     setState(() {});
   }
 
-  onLogin() {
-    final bool isFormOkey = _key.currentState?.validate() ?? false;
-    if (isFormOkey) {
-      //vamos a la proxima pesta;a o pagina
-      Navigator.pushNamed(context, AppRoutes.home);
-    } else {
-      //funcional
-      Navigator.pushNamed(context, AppRoutes.home);
-      //dise;o de app moderna
-      Navigator.pushNamed(context, AppRoutes.homescreen);
+  void _onLoginPressed() {
+    print("Botón presionado");
+    final _username = _usernameController.text.trim();
+    final _password = _passwordController.text.trim();
+
+    if (_username.isEmpty || _password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Por favor completa todos los campos")),
+      );
+      return;
     }
+    context.read<AuthBloc>().add(
+      LoginRequested(username: _username, password: _password),
+    );
   }
 
   @override
@@ -48,7 +58,8 @@ class _MyWidgetState extends State<LoginPageFormScreen> {
         child: Form(
           child: Column(
             children: [
-              const TextField(
+              TextField(
+                controller: _usernameController,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email_outlined),
                   hintText: 'Correo electrónico',
@@ -59,7 +70,8 @@ class _MyWidgetState extends State<LoginPageFormScreen> {
               ),
               const SizedBox(height: 16),
               TextFormField(
-                onFieldSubmitted: (value) => onLogin(),
+                controller: _passwordController,
+                //onFieldSubmitted: (value) => onLogin(),
                 textInputAction: TextInputAction.done,
                 obscureText: !isPasswordShown,
                 decoration: InputDecoration(
@@ -93,7 +105,8 @@ class _MyWidgetState extends State<LoginPageFormScreen> {
                 ],
               ),
               const SizedBox(height: 24),
-              LoginButtonScreen(onPressed: onLogin),
+              //LoginButtonScreen(onPressed: onLogin),
+              LoginButtonScreen(onPressed: _onLoginPressed),
             ],
           ),
         ),

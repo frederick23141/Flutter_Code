@@ -5,6 +5,9 @@ import 'package:curso_app/pages/routelist.dart';
 import 'package:curso_app/pages/cartera.dart';
 import 'package:curso_app/pages/gifpage.dart';
 import 'package:curso_app/pages/carrusel.dart';
+import 'package:curso_app/views/home/components/home_page_central.dart';
+import 'package:curso_app/views/home/home_page.dart';
+import 'package:curso_app/views/home/home_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/views/client/client_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -48,8 +51,10 @@ class DrawerMenu extends StatelessWidget {
               title: Text('Central', style: TextStyle(fontSize: 14.0)),
               onTap: () {
                 Navigator.pop(context);
-                // Acción para Inicio, crear la ruta, su ccase y llamarlo desde esta pantalla
-                Navigator.pushNamed(context, AppRoutes.homescreen);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePageScreen()),
+                );
               },
             ),
             ListTile(
