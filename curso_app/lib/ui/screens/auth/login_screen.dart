@@ -5,7 +5,7 @@ import 'package:curso_app/core/constants/app_images.dart';
 import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/core/controllers/route/route_controller.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
-import 'package:curso_app/data/repositories/auth_repository.dart';
+import 'package:curso_app/data/repositories/auth/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:curso_app/ui/screens/auth/components/login_header_screen.dart';

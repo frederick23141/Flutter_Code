@@ -1,6 +1,6 @@
 import 'package:curso_app/blocs/auth/auth_event.dart';
 import 'package:curso_app/blocs/auth/auth_state.dart';
-import 'package:curso_app/data/repositories/auth_repository.dart';
+import 'package:curso_app/data/repositories/auth/auth_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
