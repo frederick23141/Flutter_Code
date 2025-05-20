@@ -1,4 +1,4 @@
-import 'package:curso_app/ui/screens/auth/login_screen.dart';
+import 'package:curso_app/features/auth/presentation/pages/login_screen.dart';
 import 'package:curso_app/views/Settings/setings_data.dart';
 import 'package:curso_app/views/home/home_page.dart';
 import 'package:flutter/cupertino.dart';

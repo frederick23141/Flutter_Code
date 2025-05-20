@@ -2,8 +2,13 @@ import 'package:curso_app/core/routes/app_routes.dart';
 import 'package:curso_app/core/routes/on_generate_route.dart';
 import 'package:curso_app/core/themes/app_themes.dart';
 import 'package:flutter/material.dart';
+import 'package:curso_app/injection/injection_container.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setupLocator();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,17 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:curso_app/blocs/auth/auth_bloc.dart';
-import 'package:curso_app/blocs/auth/auth_state.dart';
+import 'package:curso_app/features/auth/domain/repositories/auth_repository.dart';
+import 'package:curso_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:curso_app/features/auth/presentation/bloc/auth_state.dart';
 import 'package:curso_app/core/constants/app_images.dart';
 import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/core/controllers/route/route_controller.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
-import 'package:curso_app/data/repositories/auth/auth_repository.dart';
+import 'package:curso_app/features/auth/data/repositories/auth_repository.dart';
+import 'package:curso_app/injection/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
-import 'package:curso_app/ui/screens/auth/components/login_header_screen.dart';
-import 'package:curso_app/ui/screens/auth/components/login_page_form_screen.dart';
-import 'package:curso_app/ui/screens/auth/components/login_button_screen.dart';
-import 'package:curso_app/ui/screens/auth/components/login_button_create_account.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_header_screen.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_page_form_screen.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_button_screen.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_button_create_account.dart';
 import 'package:firebase_core/firebase_core.dart' show Firebase;
 import 'package:curso_app/firebase_options.dart' show DefaultFirebaseOptions;
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -102,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
         // Firebase ya inicializado: ahora sí crea el BlocProvider con AuthBloc
         return BlocProvider(
-          create: (_) => AuthBloc(authRepository: AuthRepository()),
+          create: (_) => AuthBloc(authRepository: getIt<AuthRepository>()),
           child: BlocListener<AuthBloc, AuthState>(
             listener: (context, state) {
               if (state is AuthSuccess) {

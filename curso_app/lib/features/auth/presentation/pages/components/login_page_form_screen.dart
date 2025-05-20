@@ -1,8 +1,8 @@
-import 'package:curso_app/blocs/auth/auth_bloc.dart';
-import 'package:curso_app/blocs/auth/auth_event.dart';
+import 'package:curso_app/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:curso_app/features/auth/presentation/bloc/auth_event.dart';
 import 'package:curso_app/core/constants/app_defaults.dart';
 import 'package:curso_app/core/themes/app_themes.dart';
-import 'package:curso_app/ui/screens/auth/components/login_button_screen.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_button_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
