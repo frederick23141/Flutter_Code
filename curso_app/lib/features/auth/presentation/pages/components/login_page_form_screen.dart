@@ -43,7 +43,7 @@ class _LoginPageFormScreen extends State<LoginPageFormScreen> {
       return;
     }
     context.read<AuthBloc>().add(
-      LoginRequested(username: _username, password: _password),
+      AuthLoginRequested(username: _username, password: _password),
     );
   }
 

@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curso_app/features/auth/domain/repositories/auth_repository.dart';
+import 'package:curso_app/features/auth/domain/usecases/login_user.dart';
+import 'package:curso_app/features/auth/domain/usecases/login_user_local.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_state.dart';
 import 'package:curso_app/core/constants/app_images.dart';
@@ -104,7 +106,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
         // Firebase ya inicializado: ahora sí crea el BlocProvider con AuthBloc
         return BlocProvider(
-          create: (_) => AuthBloc(authRepository: getIt<AuthRepository>()),
+          //create: (_) => AuthBloc(authRepository: getIt<AuthRepository>()),
+          create:
+              (_) => AuthBloc(
+                loginUser: getIt<LoginUser>(),
+                loginUserLocal: getIt<LoginUserLocal>(),
+              ),
           child: BlocListener<AuthBloc, AuthState>(
             listener: (context, state) {
               if (state is AuthSuccess) {
