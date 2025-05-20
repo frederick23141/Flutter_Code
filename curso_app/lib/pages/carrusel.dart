@@ -1,5 +1,5 @@
 import 'package:card_swiper/card_swiper.dart';
-import 'package:curso_app/views/drawer/drawer_menu.dart';
+import 'package:curso_app/core/widgets/drawer_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 

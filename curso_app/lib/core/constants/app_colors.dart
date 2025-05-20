@@ -46,4 +46,14 @@ class AppColors {
 
   //card
   static const Color backgroundCard = Color(0xFFF5F5F5);
+
+  ////theme
+  ///static const Color primary = Color(0xFF2ECC71); // Verde vivo
+  static const Color primaryDark = Color(0xFF27AE60);
+  static const Color background = Color(0xFFFFFFFF); // Blanco
+  static const Color surface = Color(0xFFF9F9F9);
+  static const Color text = Color(0xFF212121); // Texto fuerte
+  //static const Color placeholder = Color(0xFF9E9E9E);
+  //static const Color border = Color(0xFFE0E0E0);
+  static const Color inputFill = Color(0xFFF3F4F6);
 }

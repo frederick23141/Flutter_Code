@@ -1,7 +1,5 @@
+import 'package:curso_app/views/home/home_page_screen.dart';
 import 'package:flutter/Material.dart';
-import 'package:curso_app/views/home/components/botton_menu_app.dart';
-
-import 'package:curso_app/views/home/components/home_page_central.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,6 +16,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  /*
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +28,12 @@ class _HomePageState extends State<HomePage> {
           foregroundColor: Colors.white, // <- texto e íconos blancos
         ),
       ),
-      home: HomePageCentral(),
+      home: HomePageScreen(),
     );
+  }
+  */
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: HomePageScreen());
   }
 }

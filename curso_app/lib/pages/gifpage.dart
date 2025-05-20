@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:curso_app/views/drawer/drawer_menu.dart';
+import 'package:curso_app/core/widgets/drawer_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/pages/models/apigif.dart';
 

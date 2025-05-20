@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:curso_app/data/datasources/database_helper.dart';
 import 'package:curso_app/features/auth/data/datasources/auth_firebase_datasource.dart';
 import 'package:curso_app/features/auth/data/datasources/auth_local_datasource.dart';
 import 'package:curso_app/features/auth/data/models/auth_user_model.dart';
@@ -23,5 +21,9 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<AuthUser?> loginLocal(String username, String password) async {
     final userModel = await local.login(username, password);
     return userModel?.toEntity();
+  }
+
+  Future<void> saveUserLocal(AuthUserModel user) async {
+    await local.insertOrUpdateUser(user);
   }
 }

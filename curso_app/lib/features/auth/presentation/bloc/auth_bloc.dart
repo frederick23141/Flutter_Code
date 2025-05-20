@@ -1,37 +1,3 @@
-/*import 'package:curso_app/features/auth/domain/repositories/auth_repository.dart';
-import 'package:curso_app/features/auth/presentation/bloc/auth_event.dart';
-import 'package:curso_app/features/auth/presentation/bloc/auth_state.dart';
-import 'package:curso_app/features/auth/data/repositories/auth_repository.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final AuthRepository authRepository;
-
-  AuthBloc({required this.authRepository}) : super(AuthInitial()) {
-    on<LoginRequested>((event, emit) async {
-      emit(AuthLoading());
-      try {
-        //FIRESTORE
-        //        final user = await authRepository.login(event.username, event.password);
-
-        //LOCAL
-        final user = await authRepository.loginLocal(
-          event.username,
-          event.password,
-        );
-
-        if (user != null) {
-          emit(AuthSuccess(user.user));
-        } else {
-          emit(AuthFailure(error: 'Error al autenficar el usuario'));
-        }
-      } catch (e) {
-        emit(AuthFailure(error: 'Error al iniciar sesion : $e'));
-      }
-    });
-  }
-}
-*/
 import 'package:curso_app/features/auth/domain/usecases/login_user.dart';
 import 'package:curso_app/features/auth/domain/usecases/login_user_local.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_event.dart';

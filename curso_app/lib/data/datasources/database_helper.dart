@@ -17,6 +17,11 @@ class DatabaseHelper {
     return _database!;
   }
 
+  Future<void> close() async {
+    final db = await database;
+    await db.close();
+  }
+
   Future<Database> _initDb() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentsDirectory.path, "my_local_db.db");
@@ -33,38 +38,5 @@ class DatabaseHelper {
         password TEXT
       )
     ''');
-  }
-
-  Future<void> insertOrUpdateUser(Map<String, dynamic> userData) async {
-    final db = await database;
-    await db.insert(
-      'users',
-      userData,
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
-  }
-
-  Future<void> close() async {
-    final db = await database;
-    await db.close();
-  }
-
-  Future<Map<String, dynamic>?> getUserByCredentials(
-    final String username,
-    final String password,
-  ) async {
-    final db = await database;
-
-    final result = await db.query(
-      'users',
-      where: 'name = ? AND password = ?',
-      whereArgs: [username, password],
-    );
-
-    if (result.isNotEmpty) {
-      return result.first; // Retorna el primer resultado encontrado (mapa)
-    } else {
-      return null; // No encontrado
-    }
   }
 }

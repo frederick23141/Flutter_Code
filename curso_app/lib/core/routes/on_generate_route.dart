@@ -1,5 +1,5 @@
 import 'package:curso_app/features/auth/presentation/pages/login_screen.dart';
-import 'package:curso_app/views/Settings/setings_data.dart';
+import 'package:curso_app/core/widgets/setings_data.dart';
 import 'package:curso_app/views/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

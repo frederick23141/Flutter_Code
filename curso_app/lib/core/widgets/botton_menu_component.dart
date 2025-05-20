@@ -19,7 +19,7 @@ class _BottonMenuComponentState extends State<BottonMenuComponent> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       currentIndex: _selectedIndex,
-      selectedItemColor: AppColors.buttonPrimary,
+      selectedItemColor: AppColors.primaryDark,
       unselectedItemColor: const Color(0xff757575),
       type: _bottomNavType,
       onTap: (index) {

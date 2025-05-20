@@ -1,21 +1,19 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:curso_app/features/auth/domain/repositories/auth_repository.dart';
 import 'package:curso_app/features/auth/domain/usecases/login_user.dart';
 import 'package:curso_app/features/auth/domain/usecases/login_user_local.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_state.dart';
-import 'package:curso_app/core/constants/app_images.dart';
 import 'package:curso_app/core/controllers/client/client_controller.dart';
 import 'package:curso_app/core/controllers/route/route_controller.dart';
 import 'package:curso_app/core/routes/app_routes.dart';
-import 'package:curso_app/features/auth/data/repositories/auth_repository.dart';
 import 'package:curso_app/injection/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
 import 'package:curso_app/features/auth/presentation/pages/components/login_header_screen.dart';
 import 'package:curso_app/features/auth/presentation/pages/components/login_page_form_screen.dart';
-import 'package:curso_app/features/auth/presentation/pages/components/login_button_screen.dart';
-import 'package:curso_app/features/auth/presentation/pages/components/login_button_create_account.dart';
+import 'package:curso_app/features/auth/presentation/pages/components/login_button_sync.dart';
 import 'package:firebase_core/firebase_core.dart' show Firebase;
 import 'package:curso_app/firebase_options.dart' show DefaultFirebaseOptions;
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,11 +36,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
     // Carga empresas y rutas después de inicializar Firebase
     await empresaController.cargarEmpresas();
-    print('Empresas cargadas: ${empresaController.empresas.length}');
+    log('Empresas cargadas: ${empresaController.empresas.length}');
     getEmpresas();
 
     await routeController.cargarRutas();
-    print('rutas encontradas:  ${routeController.routes.length}');
+    log('rutas encontradas:  ${routeController.routes.length}');
     getRutas();
   }
 
@@ -56,12 +54,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (users.docs.isNotEmpty) {
         for (var doc in users.docs) {
-          print(doc.data());
+          log(doc.data().toString());
           usuarios.add(doc.data());
         }
       }
     } catch (e) {
-      print('Error al obtener usuarios: $e');
+      log('Error al obtener usuarios: $e');
     }
   }
 
@@ -75,12 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (route.docs.isNotEmpty) {
         for (var doc in route.docs) {
-          print(doc.data());
+          log(doc.data().toString());
           rutas.add(doc.data());
         }
       }
     } catch (e) {
-      print('Error al cargar las rutas: $e');
+      log('Error al cargar las rutas: $e');
     }
   }
 
@@ -134,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         LoginHeaderScreen(),
                         LoginPageFormScreen(),
                         const SizedBox(height: 16),
-                        LoginButtonCreateAccount(),
+                        LoginButtonSync(),
                       ],
                     ),
                   ),

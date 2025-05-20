@@ -18,4 +18,8 @@ class AuthFirebaseDatasource {
 
     return AuthUserModel.fromMap(snapshot.docs.first.data());
   }
+
+  Future<QuerySnapshot<Map<String, dynamic>>> getAllUsers() {
+    return firestore.collection('users').get();
+  }
 }

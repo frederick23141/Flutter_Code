@@ -4,7 +4,7 @@ import 'package:curso_app/views/client/components/card_client.dart';
 import 'package:curso_app/views/client/components/client_page_form.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:curso_app/views/drawer/drawer_menu.dart';
+import 'package:curso_app/core/widgets/drawer_menu.dart';
 import 'package:curso_app/views/client/components/client_header.dart';
 
 class ClientPage extends StatefulWidget {

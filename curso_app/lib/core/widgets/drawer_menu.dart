@@ -5,7 +5,6 @@ import 'package:curso_app/pages/routelist.dart';
 import 'package:curso_app/pages/cartera.dart';
 import 'package:curso_app/pages/gifpage.dart';
 import 'package:curso_app/pages/carrusel.dart';
-import 'package:curso_app/views/home/components/home_page_central.dart';
 import 'package:curso_app/views/home/home_page.dart';
 import 'package:curso_app/views/home/home_page_screen.dart';
 import 'package:flutter/material.dart';

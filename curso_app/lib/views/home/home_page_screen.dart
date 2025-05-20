@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
-import 'package:curso_app/views/drawer/botton_menu_component.dart';
-import 'package:curso_app/views/drawer/drawer_menu.dart';
+import 'package:curso_app/core/widgets/botton_menu_component.dart';
+import 'package:curso_app/core/widgets/drawer_menu.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
@@ -20,14 +20,15 @@ class _HomePageScreenState extends State<HomePageScreen> {
       appBar: AppBar(
         title: const Text(
           'Hola, asesor',
-          style: TextStyle(color: AppColors.textPrimary),
+          style: TextStyle(color: AppColors.textPrimary, fontSize: 20),
         ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        //backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.primaryDark,
+        elevation: 5,
         centerTitle: false,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 18.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,7 +185,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 if (isDone)
                   const Icon(
                     Icons.check_circle,
-                    color: AppColors.success,
+                    color: AppColors.primaryDark,
                     size: 16,
                   ),
                 const SizedBox(width: 4),
@@ -221,7 +222,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
         margin: const EdgeInsets.symmetric(horizontal: 6),
         child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.buttonPrimary,
+            backgroundColor: AppColors.primaryDark,
             padding: const EdgeInsets.symmetric(vertical: 12),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),

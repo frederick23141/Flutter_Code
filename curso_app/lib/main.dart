@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'app name',
       theme: AppTheme.defaultTheme,
+
       onGenerateRoute: RouteGenerator.onGenerate,
       initialRoute: AppRoutes.login_screen,
       // initialRoute: AppRoutes.login,

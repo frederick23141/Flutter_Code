@@ -1,6 +1,6 @@
 import 'package:curso_app/pages/components/carteracomponent.dart';
 import 'package:curso_app/pages/components/carteradetallecomponent.dart';
-import 'package:curso_app/views/drawer/drawer_menu.dart';
+import 'package:curso_app/core/widgets/drawer_menu.dart';
 import 'package:flutter/material.dart';
 
 //void main() => runApp(cartera());

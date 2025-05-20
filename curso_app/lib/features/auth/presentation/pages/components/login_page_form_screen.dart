@@ -1,14 +1,10 @@
 import 'package:curso_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:curso_app/features/auth/presentation/bloc/auth_event.dart';
-import 'package:curso_app/core/constants/app_defaults.dart';
 import 'package:curso_app/core/themes/app_themes.dart';
 import 'package:curso_app/features/auth/presentation/pages/components/login_button_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_app/core/constants/app_colors.dart';
-import 'package:curso_app/core/routes/app_routes.dart';
 
-import 'package:curso_app/views/home/home_page_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginPageFormScreen extends StatefulWidget {
@@ -68,7 +64,7 @@ class _LoginPageFormScreen extends State<LoginPageFormScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 20),
               TextFormField(
                 controller: _passwordController,
                 //onFieldSubmitted: (value) => onLogin(),
